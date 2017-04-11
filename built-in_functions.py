@@ -94,3 +94,24 @@ print(dir(len))
 
 # divmod(a, b) like (a/b, a%b)
 print(divmod(11, 5))
+
+# enumerate(iterable, start=0)
+for i, animal in enumerate(["cat", "dog", "elephant"], 1):
+    print(i, animal)
+
+# eval(expression, globals=None, locals=None)
+eval('print("Hello world!")')
+
+# exec(object[, globals[, locals]])
+exec('print("Hello world!")')
+
+# filter(function, iterable)
+print(list(filter(lambda x: x > 5, range(10))))
+
+# float(object)
+print(float(12))
+print(float("-4234.876"))
+print(float("Inf"))
+
+# format(value[, format_spec])
+print('Hello you are {0} nice fela!'.format(1))
