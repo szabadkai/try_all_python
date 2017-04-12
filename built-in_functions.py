@@ -115,3 +115,49 @@ print(float("Inf"))
 
 # format(value[, format_spec])
 print('Hello you are {0} nice fela!'.format(1))
+
+# frozenset(iterable)
+# frozenset is hashable so it can be an item in a regular set.
+print({frozenset({1, 2, 3})})
+
+# getattr(object, name[, default])
+print(getattr("Hello", "upper"))
+
+# globals()
+for glob in list(globals()):
+    print(glob)
+
+# hasattr(object, name)
+print(hasattr("Cirmi", "is_awesome"))
+print(hasattr("Cirmi", "__len__"))
+
+# hash(object)
+print(hash(1), hash(1.0))
+print(hash(""), hash("Hello"))
+
+# help([object])
+# help returns None, it is intended to used in the shell
+print(help(len))
+
+# hex(x)
+print(hex(11))
+
+# id(object) - memory address in CPython
+print(id({}), id("Hello"))
+
+# input(prompt)
+# print(input("Input number:\n"))
+
+# int(x=0)
+print(int())
+print(int(3.3))
+print(int("16", base=30))
+
+# isinstance(object, classinfo)
+print(isinstance("World!", "".__class__))
+print(isinstance("World!", TypeError))
+
+# issubclass(class, classinfo)
+print(issubclass(TypeError, "".__class__))
+print(issubclass(TypeError, TypeError))
+print(issubclass(TypeError, Exception))
