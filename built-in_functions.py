@@ -161,3 +161,50 @@ print(isinstance("World!", TypeError))
 print(issubclass(TypeError, "".__class__))
 print(issubclass(TypeError, TypeError))
 print(issubclass(TypeError, Exception))
+
+# iter(o, sentinel)
+import random
+
+
+def f():
+    while 1:
+        yield random.randrange(0, 10)
+
+
+for i in iter(f().__next__, 2):
+    print(i)
+
+print(iter([]).__class__)
+
+# len(s)
+print(len(range(5)), len("Hello World!"), len({"d": 213}), len(["Asd", "fasdf"]))
+
+# list(iterable)
+print(list("Hello World!"))
+print(list([1, 2, 3]))
+print(list((1, 2, 3)))
+print(list({1, 2, 3}))
+print(list({'H': "e", "l": "l", "o": "!"}))
+
+
+# locals()
+def f():
+    tmp = 1
+    print("locals: {}".format(repr(locals())))
+
+
+print("locals: {}".format(repr(locals())))
+f()
+
+
+# map(function, iterable)
+def f(i):
+    return i ** i
+
+
+print(list(map(f, [1, 2, 3])))
+
+# max(iter) or max(*args)
+print(max(5, 12, 1))
+print(max([5, 12, 1]))
+print(max([5, 12, 1], [5, 12, 1, 2]))
