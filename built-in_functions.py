@@ -10,7 +10,7 @@ print(any([True, False]), any([False, False]), any([True, True]))
 # ascii(object)
 print(ascii(u'Ahogy várható volt, egy politikailag igazán '))
 
-# bin(x)
+# bin(x)b
 print([bin(i) for i in range(4)])
 
 # bool([x])
@@ -208,3 +208,39 @@ print(list(map(f, [1, 2, 3])))
 print(max(5, 12, 1))
 print(max([5, 12, 1]))
 print(max([5, 12, 1], [5, 12, 1, 2]))
+
+# memoryview(obj)
+print(memoryview(b"Hello")[2:])
+
+# min(iterable) / (*args)
+print(min(5, 12, 1))
+print(min([5, 12, 1]))
+print(min([5, 12, 1], [5, 12, 1, 2]))
+
+# next(iterator)
+l = iter([1, 2, 3])
+try:
+    while (1):
+        print(l.__next__())
+except StopIteration as e:
+    print("Iteration over")
+
+# object()
+print(dir(object()))
+
+# oct(x)
+print(oct(123))
+
+# open
+with open("spam.txt", "w") as f:
+    print("This will be in that file", file=f)
+with open("spam.txt", "r") as f:
+    for i in f:
+        print(i)
+
+# ord(c)
+print([ord(i) for i in "Hello"])
+
+# pow(x,y,z) pow(x, y) % z)
+print(pow(3, 2, 2))
+print(pow(3, 2))
