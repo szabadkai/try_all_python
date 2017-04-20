@@ -244,3 +244,60 @@ print([ord(i) for i in "Hello"])
 # pow(x,y,z) pow(x, y) % z)
 print(pow(3, 2, 2))
 print(pow(3, 2))
+
+# print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+print(*[str(i) for i in range(10)], sep="^-^", end=" THE END\n", flush=True)
+
+
+# property ()
+class C:
+    def __init__(self):
+        self._x = None
+
+    @property
+    def x(self):
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        self._x = value
+
+    @x.deleter
+    def x(self):
+        del self._x
+
+
+# range(start, stop, step)
+print(list(range(2, 10, 3)))
+print(list(range(10, 0, -2)))
+
+
+class B:
+    def __repr__(self):
+        return "B is the best"
+
+    def __str__(self):
+        return "What is B? "
+
+
+print(str(B()), repr(B()))
+
+# reversed(seq)
+print(list(reversed(range(5))))
+print(reversed(range(5)))
+
+# round(num, ndigits)
+print(round(2.675, ndigits=2))
+print(round(2.765, ndigits=2))
+print("wat?")
+
+# set(iterable)
+print(set([1, 1, 1, 1, 1]) == {1})  # True
+
+# setattr(object, name, value)
+b = B()
+setattr(b, "x", "Monkey-Patched Attribute")
+print(b.x)
+
+# slice(start, stop, step)
+print([1, 2, 3].__getitem__(slice(0, 2)))
