@@ -301,3 +301,6 @@ print(b.x)
 
 # slice(start, stop, step)
 print([1, 2, 3].__getitem__(slice(0, 2)))
+
+# sorted(iterable, key, reversed)
+print(sorted(["Hell", "o W", "orld", "!!!"], key=str.lower, reverse=False))
