@@ -47,7 +47,7 @@ print(chr(45))
 print([chr(i) for i in range(500)])
 
 
-# classmethod(function)
+# classmethod(function) hola
 class C:
     @classmethod
     def f(cls, i):
